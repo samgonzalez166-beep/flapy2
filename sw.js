@@ -1,20 +1,20 @@
 const CACHE_NAME = "mi-juego-cache-v1";
 
 const FILES_TO_CACHE = [
-  "./",
-  "./index.html",
-  "./main.js",
-  "./inicio.js",
-  "./juego.js",
-  "./gameover.js",
-  "./manifest.json",
-  "./bird2.png",
-  "./fondo2.jpg",
-  "./pipe.png",  
-  "./play.jpg",
-  "./reiniciar.jpg",
-  "./Icono1.png",
-  "./Icono2.png", 
+  "/",
+  "/index.html",
+  "/main.js",
+  "/inicio.js",
+  "/juego.js",
+  "/gameover.js",
+  "/manifest.json",
+  "/bird2.png",
+  "/fondo2.jpg",
+  "/pipe.png",  
+  "/play.jpg",
+  "/reiniciar.jpg",
+  "/icono1.png",
+  "/icono2.png", 
   "https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"
 ];
 
