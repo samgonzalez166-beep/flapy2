@@ -6,20 +6,16 @@
 
 <meta charset="UTF-8">
 
-<link rel="manifest" href="manifest.json">
-
 <!-- IMPORTANTE PARA CELULARES -->
-
-<meta name ="viewport" content ="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-
-<title>Kike volador</title>
+<meta name ="viewport" content ="width=device-width, initial-scale=1.0, user-scalable=no">
+<!-- Manifest para instalar la app -->
+<link rel="manifest" href="manifest.json">
+  
+<title>Kike Volador</title>
 
 <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
-
-<link rel="apple-touch-icon" href="Icono.jpg">
-<meta name="apple-mobile-web-app-capable" content="Kike">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Kike Volador">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
 <style>
 
@@ -45,24 +41,21 @@ height:auto;
 </head>
 
 <body>
-<!-- Eliminamos el directorio -->
-<script src ="inicio.js"></script> 
+
+<script src ="inicio.js"></script>
 <script src ="juego.js"></script>
 <script src ="gameover.js"></script>
 <script src ="main.js"></script>
 
-<!-- Agregamos el service worker -->
-<script> 
+<script>
+// Registrar el Service Worker
 if ("serviceWorker" in navigator) {
-  if ("serviceWorker" in navigator) {
-     window.addEventListener("load", () => {
-       navigator.serviceWorker.register("sw.js")
-         .then((registration) => console.log("Service Worker registrado", registration))
-         .catch((error) => console.log("Error al registrar el Service Worker:", error));
-     });
-    }
-  }
+  navigator.serviceWorker.register("./sw.js")
+    .then(() => console.log("Service Worker registrado"))
+    .catch(error => console.log("Error al registrar Service Worker:", error));
+}
 </script>
+
 
 </body>
 </html>
